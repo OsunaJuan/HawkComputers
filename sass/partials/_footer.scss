@@ -1,0 +1,45 @@
+footer{
+    display: flex;
+    justify-content: space-around;
+    background-color: $black;
+    padding: 30px;
+
+    .footer--rigthBlock{
+        h2{
+            margin-bottom: 15px;
+            color: $white;
+            font-family: $roboto;
+            font-size: 2.8rem;
+        }
+
+        div{
+            a{
+                text-decoration: none;
+                div{
+                    display: flex;
+                    margin-bottom: 10px;
+                    p{
+                        color: $white;
+                        font-family: $roboto;
+                        font-size: 2rem;
+                    }
+                    img{
+                        width: 25px;
+                        height: 25px;
+                        margin-right: 20px;
+                    }
+                }
+            }
+        }
+    }
+
+    .footer--LeftBlock{
+        display: flex;
+        align-items: center ;
+        h2{
+            color: $white;
+            font-family: $bebas-neue;
+            font-size: 6rem;
+        }
+    }
+}

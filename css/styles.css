@@ -11,6 +11,9 @@ html {
   width: 100%;
   scroll-behavior: smooth;
 }
+html ::-webkit-scrollbar {
+  display: none;
+}
 
 body {
   font-size: 1.6rem;
@@ -190,12 +193,40 @@ main .BestSeller .BestSeller--grid img {
 footer {
   display: flex;
   justify-content: space-around;
-  background-color: rgba(233, 229, 229, 0.774);
+  background-color: #363838;
   padding: 30px;
 }
-footer .footer--LeftBlock img {
-  width: 100%;
-  max-width: 300px;
+footer .footer--rigthBlock h2 {
+  margin-bottom: 15px;
+  color: #f3f5f0;
+  font-family: "Roboto Condensed", sans-serif;
+  font-size: 2.8rem;
+}
+footer .footer--rigthBlock div a {
+  text-decoration: none;
+}
+footer .footer--rigthBlock div a div {
+  display: flex;
+  margin-bottom: 10px;
+}
+footer .footer--rigthBlock div a div p {
+  color: #f3f5f0;
+  font-family: "Roboto Condensed", sans-serif;
+  font-size: 2rem;
+}
+footer .footer--rigthBlock div a div img {
+  width: 25px;
+  height: 25px;
+  margin-right: 20px;
+}
+footer .footer--LeftBlock {
+  display: flex;
+  align-items: center;
+}
+footer .footer--LeftBlock h2 {
+  color: #f3f5f0;
+  font-family: "Bebas Neue", cursive;
+  font-size: 6rem;
 }
 
 /*# sourceMappingURL=styles.css.map */
