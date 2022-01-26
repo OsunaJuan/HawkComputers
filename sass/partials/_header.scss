@@ -1,0 +1,47 @@
+header{
+    width: 100%;
+    // background-color: $black;
+    position: absolute;
+    top: 0;
+
+    nav{
+        display: flex;
+        justify-content: space-between;
+        margin-left: 40px;
+        margin-right: 20px;
+        .brandName{
+            width: 50%;
+            font-family: $bebas-neue;
+            font-size: 6rem;
+            color: $white;
+        }
+    
+        .navbar{
+            display: flex;
+            justify-content: flex-end;
+            width: 50%;
+            ul{
+                display: flex;
+                align-items: center;
+                li{
+                    list-style: none;
+                    height: fit-content;
+                    a{
+                        margin: 0 10px 0 10px;
+                        text-decoration: none;
+                        color: $white;        
+                        font-size: 2rem;   
+                        font-family: $roboto;
+                        border-bottom: 2px transparent solid;
+                        
+                        &:hover{
+                            transition:  all 0.5s;
+                            border-bottom: 2px $white solid;
+                        }
+                    }
+                }
+            }
+        }   
+    }
+
+}

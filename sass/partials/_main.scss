@@ -1,0 +1,154 @@
+main{
+    .hero{
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        flex-direction: column;
+        width: 100%;
+        height: 100vh;
+        
+        background-image: url("/resources/media/pexels-jessica-lewis-creative-867465.webp");
+        background-position: center;
+        background-repeat: no-repeat;
+
+        .hero--textContainer{
+            margin-left: 40px;
+            text-align: left;
+
+            h1{
+                color: $black;
+                font-size: 5rem;
+                font-family: $bebas-neue;
+            }
+
+            p{
+                width: 500px;
+                color: $black;
+                font-size: 3rem;
+                font-family: $roboto; 
+                margin-bottom: 30px;
+            }
+
+            a{
+                text-decoration: none;
+                color: $black;
+                font-family: $roboto;
+                font-size: 2rem;
+                font-weight: 700;
+                padding: 15px 30px 15px 30px;
+                background-color: $white;
+                border-radius: 2px;
+                box-shadow: 1px 3px 3px rgba(49, 49, 49, 0.493);
+                transition: all 0.2s;
+
+                &:hover{
+                    opacity: 70%;
+                    box-shadow: 1px 3px 3px rgba(49, 49, 49, 0.137);
+                }
+            }
+        }
+    }
+
+    .coffeInfo{
+        display: flex;
+        justify-content: space-around;
+        flex-direction: column;
+        padding: 30px;
+        background-color: $white;
+
+        h2{
+            color: $black;
+            font-family: $roboto;
+            font-weight: 700;
+            font-size: 3rem;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .coffeInfo--Content{
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+
+            .cofferInfo--rightBlock,.cofferInfo--centerBlock,.coffeInfo--leftBlock{
+                h3{
+                    margin-bottom: 10px;
+                    color: $black;
+                    font-size: 2.8rem;
+                    font-family: $roboto;
+                    text-align: center;
+                   }
+   
+                   figure{
+                       position: relative;
+                   }
+   
+                    div{
+                       display: flex;
+                       align-items: center;
+                       width: 400px;
+                       height: 400px;
+                       background-size: contain;
+                       transition: all 1s;
+                       border-radius: 5px;
+   
+                       &:hover{
+                           p{
+                               opacity: 100%;
+                           }
+                       }   
+                       p{
+                           opacity: 0%;
+                           color: $white;
+                           font-size: 2.8rem;
+                           font-family: $roboto;
+                           text-align: center;
+                           transition: all 1s;
+                       }
+                    }
+
+                    .divRight{
+                        background-image: url("/resources/media/coffe-quality.jpg");
+                        &:hover{
+                            background-image: url("/resources/media/quality_oscurecida.webp");
+                        }
+                    }
+
+                    .divCenter{
+                        background-image: url("/resources/media/Coffe-variedad.jpg");
+                        &:hover{
+                            background-image: url("/resources/media/variedad_osucreciad.webp");
+                        }
+                    }
+
+                    .divLeft{
+                        background-image: url("/resources/media/coffe-plantacion.jpg");
+                        &:hover{
+                            background-image: url("/resources/media/plantaciones_oscurecidas.webp");
+                        }
+                    }
+   
+                }
+            }
+    }
+    
+    .BestSeller{
+
+        padding: 30px;
+
+        .BestSeller--grid{
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            grid-template-rows: repeat(2, 1fr);
+            place-items: center;
+            gap: 15px;
+
+            img{
+                width: 100%;
+                max-width: 400px;
+
+            }
+        }
+    }
+}
+
