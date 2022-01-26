@@ -176,18 +176,73 @@ main .coffeInfo .coffeInfo--Content .cofferInfo--rightBlock .divLeft:hover, main
   background-image: url("/resources/media/plantaciones_oscurecidas.webp");
 }
 main .BestSeller {
+  background-color: #f3f5f0;
   padding: 30px;
+}
+main .BestSeller h2 {
+  margin-bottom: 60px;
+  color: #363838;
+  font-size: 2.8rem;
+  font-family: "Roboto Condensed", sans-serif;
+  font-size: 700;
+  text-align: center;
 }
 main .BestSeller .BestSeller--grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(2, 1fr);
-  place-items: center;
-  gap: 15px;
+  justify-items: center;
 }
-main .BestSeller .BestSeller--grid img {
+main .BestSeller .BestSeller--grid .bestSeller--item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column;
+  flex-wrap: wrap;
+  margin-bottom: 30px;
+  border-radius: 5px;
+  background-color: #dddddd;
+  box-shadow: 0px 3px 3px 0 rgba(192, 192, 192, 0.5);
+}
+main .BestSeller .BestSeller--grid .bestSeller--item img {
+  max-width: 300px;
   width: 100%;
-  max-width: 400px;
+  height: auto;
+  margin-bottom: 5px;
+  border-radius: 5px;
+}
+main .BestSeller .BestSeller--grid .bestSeller--item p {
+  margin-bottom: 5px;
+  color: #363838;
+  font-family: "Roboto Condensed", sans-serif;
+  font-size: 2rem;
+}
+main .BestSeller .BestSeller--grid .bestSeller--item div {
+  display: flex;
+}
+main .BestSeller .BestSeller--grid .bestSeller--item div p {
+  font-size: 2rem;
+  margin-right: 5px;
+}
+main .BestSeller .BestSeller--grid .bestSeller--item div input {
+  width: 30px;
+  height: 20px;
+  margin-bottom: 15px;
+  border: 2px #363838 solid;
+  background-color: #f3f5f0;
+}
+main .BestSeller .BestSeller--grid .bestSeller--item button {
+  width: 100px;
+  height: 25px;
+  margin-bottom: 15px;
+  border: 1px #363838 solid;
+  border-radius: 3px;
+  background-color: #363838;
+  color: #f3f5f0;
+}
+main .BestSeller .BestSeller--grid .bestSeller--item button:hover {
+  transition: all 0.3s;
+  opacity: 75%;
 }
 
 footer {
