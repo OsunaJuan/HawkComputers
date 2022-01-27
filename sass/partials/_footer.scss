@@ -3,6 +3,7 @@ footer{
     justify-content: space-around;
     background-color: $black;
     padding: 30px;
+    margin-top: 20px;
 
     .footer--rigthBlock{
         h2{
@@ -40,6 +41,7 @@ footer{
             color: $white;
             font-family: $bebas-neue;
             font-size: 6rem;
+            letter-spacing: 3px;
         }
     }
 }
