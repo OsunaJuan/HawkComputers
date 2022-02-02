@@ -30,6 +30,7 @@ function bestSellerHTML(arrayProductos,elementoPadreHTLM,index){
     let divBSItem = document.createElement("div");
     divBSItem.classList.add("bestSeller--item")
     elementoPadreHTLM.appendChild(divBSItem);
+    
     divBSItem.innerHTML = 
     `<img src=${arrayProductos[index].imgURL} alt="">
     <p>${arrayProductos[index].name}</p>
@@ -95,8 +96,6 @@ for(let i = 0; i <=5;){
 
 let CarritoHTML = document.getElementById("carrito");
 
-console.dir(CarritoHTML);
-
 // traemos los botones generados
 let botonesBs = document.getElementsByClassName("BSbttn");
 
@@ -119,9 +118,9 @@ function encontrarCantidad(pdt,arrayUnidades){
     }
 }
 
-let carrito = [];
-
 //Esta funcion almacena un objeto de tipo producto en el carrito cuando se pulsa el boton correspondiente
+
+let carrito = [];
 
 function añadirCarrito(){
     let idProducto = this.id;
@@ -137,7 +136,7 @@ function añadirCarrito(){
 
     
 
-    if(cantidad > 0 && cantidad<producto.stock){
+    if(cantidad > 0 && cantidad <= producto.stock){
 
         //TODO : VERIFICADOR DE QUE EL PRODUCTO YA ESTE EN CARRITO Y ACTUALIZADOR DE CANTIDAD
 
