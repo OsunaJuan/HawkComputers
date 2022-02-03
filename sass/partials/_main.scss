@@ -110,23 +110,23 @@ main{
                     }
 
                     .divRight{
-                        background-image: url("/resources/media/coffe-quality.jpg");
+                        background-image: url("../../resources/media/coffe-quality.jpg");
                         &:hover{
-                            background-image: url("/resources/media/quality_oscurecida.webp");
+                            background-image: url("../../resources/media/quality_oscurecida.webp");
                         }
                     }
 
                     .divCenter{
-                        background-image: url("/resources/media/Coffe-variedad.jpg");
+                        background-image: url("../../resources/media/Coffe-variedad.jpg");
                         &:hover{
-                            background-image: url("/resources/media/variedad_osucreciad.webp");
+                            background-image: url("../../resources/media/variedad_osucreciad.webp");
                         }
                     }
 
                     .divLeft{
-                        background-image: url("/resources/media/coffe-plantacion.jpg");
+                        background-image: url("../../resources/media/coffe-plantacion.jpg");
                         &:hover{
-                            background-image: url("/resources/media/plantaciones_oscurecidas.webp");
+                            background-image: url("../../resources/media/plantaciones_oscurecidas.webp");
                         }
                     }
    
@@ -228,7 +228,7 @@ main{
         bottom: 10px;
         left: 94%;
         background-color: black;
-        background-image: url("/resources/Icons/cart-fill.svg");
+        background-image: url("../../resources/Icons/cart-fill.svg");
         background-repeat: no-repeat;
         background-position: center;
         background-size: 50%;

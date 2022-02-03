@@ -164,22 +164,22 @@ main .coffeInfo .coffeInfo--Content .cofferInfo--rightBlock div p, main .coffeIn
   transition: all 1s;
 }
 main .coffeInfo .coffeInfo--Content .cofferInfo--rightBlock .divRight, main .coffeInfo .coffeInfo--Content .cofferInfo--centerBlock .divRight, main .coffeInfo .coffeInfo--Content .coffeInfo--leftBlock .divRight {
-  background-image: url("/resources/media/coffe-quality.jpg");
+  background-image: url("../../resources/media/coffe-quality.jpg");
 }
 main .coffeInfo .coffeInfo--Content .cofferInfo--rightBlock .divRight:hover, main .coffeInfo .coffeInfo--Content .cofferInfo--centerBlock .divRight:hover, main .coffeInfo .coffeInfo--Content .coffeInfo--leftBlock .divRight:hover {
-  background-image: url("/resources/media/quality_oscurecida.webp");
+  background-image: url("../../resources/media/quality_oscurecida.webp");
 }
 main .coffeInfo .coffeInfo--Content .cofferInfo--rightBlock .divCenter, main .coffeInfo .coffeInfo--Content .cofferInfo--centerBlock .divCenter, main .coffeInfo .coffeInfo--Content .coffeInfo--leftBlock .divCenter {
-  background-image: url("/resources/media/Coffe-variedad.jpg");
+  background-image: url("../../resources/media/Coffe-variedad.jpg");
 }
 main .coffeInfo .coffeInfo--Content .cofferInfo--rightBlock .divCenter:hover, main .coffeInfo .coffeInfo--Content .cofferInfo--centerBlock .divCenter:hover, main .coffeInfo .coffeInfo--Content .coffeInfo--leftBlock .divCenter:hover {
-  background-image: url("/resources/media/variedad_osucreciad.webp");
+  background-image: url("../../resources/media/variedad_osucreciad.webp");
 }
 main .coffeInfo .coffeInfo--Content .cofferInfo--rightBlock .divLeft, main .coffeInfo .coffeInfo--Content .cofferInfo--centerBlock .divLeft, main .coffeInfo .coffeInfo--Content .coffeInfo--leftBlock .divLeft {
-  background-image: url("/resources/media/coffe-plantacion.jpg");
+  background-image: url("../../resources/media/coffe-plantacion.jpg");
 }
 main .coffeInfo .coffeInfo--Content .cofferInfo--rightBlock .divLeft:hover, main .coffeInfo .coffeInfo--Content .cofferInfo--centerBlock .divLeft:hover, main .coffeInfo .coffeInfo--Content .coffeInfo--leftBlock .divLeft:hover {
-  background-image: url("/resources/media/plantaciones_oscurecidas.webp");
+  background-image: url("../../resources/media/plantaciones_oscurecidas.webp");
 }
 main .BestSeller {
   background-color: #f3f5f0;
@@ -261,7 +261,7 @@ main .Carrito {
   bottom: 10px;
   left: 94%;
   background-color: black;
-  background-image: url("/resources/Icons/cart-fill.svg");
+  background-image: url("../../resources/Icons/cart-fill.svg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: 50%;
