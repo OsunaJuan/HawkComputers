@@ -8,7 +8,7 @@ main{
         width: 100%;
         height: 100vh;
         
-        background-image: url("../../resources/media/pexels-jessica-lewis-creative-867465.webp");
+        background-image: url("../../resources/imagenes/pexels-jessica-lewis-creative-867465.webp");
         background-position: center;
         background-repeat: no-repeat;
 
@@ -110,23 +110,23 @@ main{
                     }
 
                     .divRight{
-                        background-image: url("../../resources/media/coffe-quality.jpg");
+                        background-image: url("../../resources/imagenes/coffe-quality.jpg");
                         &:hover{
-                            background-image: url("../../resources/media/quality_oscurecida.webp");
+                            background-image: url("../../resources/imagenes/quality_oscurecida.webp");
                         }
                     }
 
                     .divCenter{
-                        background-image: url("../../resources/media/Coffe-variedad.jpg");
+                        background-image: url("../../resources/imagenes/Coffe-variedad.jpg");
                         &:hover{
-                            background-image: url("../../resources/media/variedad_osucreciad.webp");
+                            background-image: url("../../resources/imagenes/variedad_osucreciad.webp");
                         }
                     }
 
                     .divLeft{
-                        background-image: url("../../resources/media/coffe-plantacion.jpg");
+                        background-image: url("../../resources/imagenes/coffe-plantacion.jpg");
                         &:hover{
-                            background-image: url("../../resources/media/plantaciones_oscurecidas.webp");
+                            background-image: url("../../resources/imagenes/plantaciones_oscurecidas.webp");
                         }
                     }
    

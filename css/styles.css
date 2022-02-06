@@ -76,7 +76,7 @@ main .hero {
   flex-direction: column;
   width: 100%;
   height: 100vh;
-  background-image: url("../../resources/media/pexels-jessica-lewis-creative-867465.webp");
+  background-image: url("../../resources/imagenes/pexels-jessica-lewis-creative-867465.webp");
   background-position: center;
   background-repeat: no-repeat;
 }
@@ -164,22 +164,22 @@ main .coffeInfo .coffeInfo--Content .cofferInfo--rightBlock div p, main .coffeIn
   transition: all 1s;
 }
 main .coffeInfo .coffeInfo--Content .cofferInfo--rightBlock .divRight, main .coffeInfo .coffeInfo--Content .cofferInfo--centerBlock .divRight, main .coffeInfo .coffeInfo--Content .coffeInfo--leftBlock .divRight {
-  background-image: url("../../resources/media/coffe-quality.jpg");
+  background-image: url("../../resources/imagenes/coffe-quality.jpg");
 }
 main .coffeInfo .coffeInfo--Content .cofferInfo--rightBlock .divRight:hover, main .coffeInfo .coffeInfo--Content .cofferInfo--centerBlock .divRight:hover, main .coffeInfo .coffeInfo--Content .coffeInfo--leftBlock .divRight:hover {
-  background-image: url("../../resources/media/quality_oscurecida.webp");
+  background-image: url("../../resources/imagenes/quality_oscurecida.webp");
 }
 main .coffeInfo .coffeInfo--Content .cofferInfo--rightBlock .divCenter, main .coffeInfo .coffeInfo--Content .cofferInfo--centerBlock .divCenter, main .coffeInfo .coffeInfo--Content .coffeInfo--leftBlock .divCenter {
-  background-image: url("../../resources/media/Coffe-variedad.jpg");
+  background-image: url("../../resources/imagenes/Coffe-variedad.jpg");
 }
 main .coffeInfo .coffeInfo--Content .cofferInfo--rightBlock .divCenter:hover, main .coffeInfo .coffeInfo--Content .cofferInfo--centerBlock .divCenter:hover, main .coffeInfo .coffeInfo--Content .coffeInfo--leftBlock .divCenter:hover {
-  background-image: url("../../resources/media/variedad_osucreciad.webp");
+  background-image: url("../../resources/imagenes/variedad_osucreciad.webp");
 }
 main .coffeInfo .coffeInfo--Content .cofferInfo--rightBlock .divLeft, main .coffeInfo .coffeInfo--Content .cofferInfo--centerBlock .divLeft, main .coffeInfo .coffeInfo--Content .coffeInfo--leftBlock .divLeft {
-  background-image: url("../../resources/media/coffe-plantacion.jpg");
+  background-image: url("../../resources/imagenes/coffe-plantacion.jpg");
 }
 main .coffeInfo .coffeInfo--Content .cofferInfo--rightBlock .divLeft:hover, main .coffeInfo .coffeInfo--Content .cofferInfo--centerBlock .divLeft:hover, main .coffeInfo .coffeInfo--Content .coffeInfo--leftBlock .divLeft:hover {
-  background-image: url("../../resources/media/plantaciones_oscurecidas.webp");
+  background-image: url("../../resources/imagenes/plantaciones_oscurecidas.webp");
 }
 main .BestSeller {
   background-color: #f3f5f0;
