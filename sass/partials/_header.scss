@@ -1,6 +1,5 @@
 header{
     width: 100%;
-    // background-color: $black;
     position: absolute;
     top: 0;
 
@@ -45,4 +44,23 @@ header{
         }   
     }
 
+}
+
+//Estilos del header de la tienda
+
+.headerTienda{
+    position: static;
+    .brandTienda{
+        color: $black;
+        text-decoration: none;
+    }
+
+    .ulTienda{
+        a{
+            color: $black;
+            &:hover{
+                border-bottom: 2px $black solid;
+            }
+        }
+    }
 }

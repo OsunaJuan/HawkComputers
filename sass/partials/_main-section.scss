@@ -150,7 +150,7 @@ main{
         .BestSeller--grid{
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            grid-template-rows: repeat(2, 1fr);
+            grid-template-rows: 1fr 1fr 30px;
             justify-items: center;
             
 
@@ -218,14 +218,27 @@ main{
                 }
             }
 
+            a{
+                grid-area:3/1/4/4;
+                place-self: center;
+                text-decoration: underline;
+                font-family: $roboto;
+                color: $black;
+                font-size: 3rem;
+                transition: all .3s;
+                &:hover{
+                    transform: scale(.9);
+                }
+                
+            }
 
 
         }
     }
 
     .Carrito{
-        position: sticky;
-        bottom: 10px;
+        position: fixed;
+        bottom: 30px;
         left: 94%;
         background-color: black;
         background-image: url("/Proyecto_final/resources/Icons/cart-fill.svg");

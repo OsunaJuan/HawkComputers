@@ -26,10 +26,10 @@ function insertarProducto(array,idB,idU,nombre,precio,inventario,categoriasTiend
 
 //funcion que Mostrara nuestros productos en la pagina
 
-function bestSellerHTML(arrayProductos,elementoPadreHTLM,index){
+function tiendaHTML(arrayProductos,elementoPadreHTLM,index){
     let divBSItem = document.createElement("div");
     divBSItem.classList.add("bestSeller--item")
-    elementoPadreHTLM.appendChild(divBSItem);
+    elementoPadreHTLM.prepend(divBSItem);
     
     divBSItem.innerHTML = 
     `<img src=${arrayProductos[index].imgURL} alt="">
@@ -63,6 +63,12 @@ insertarProducto(ListadoCafes,3,3,"Cafe Blend Brasil Colombia",450,25,"Cafe");
 insertarProducto(ListadoCafes,4,4,"Cafe Brasil Bourbon",520, 25, "Cafe");
 insertarProducto(ListadoCafes,5,5,"Cafe Guatemala",650,25,"Cafe");
 insertarProducto(ListadoCafes,6,6,"Cafe Etiopia", 700,25,"Cafe");
+
+    //lo almacenamos en el local storage
+
+    if(!localStorage.hasOwnProperty("listadoCafes")){
+        localStorage.setItem("listadoCafes", JSON.stringify(ListadoCafes));
+    }
     
     //Listado de Capsulas
 let ListadoCapsulas = [];
@@ -72,8 +78,20 @@ insertarProducto(ListadoCapsulas,9,9,"Capsulas de Cafe Oreiras ",620,25,"Capsula
 insertarProducto(ListadoCapsulas,10,10,"Capsulas de Cafe Caffetino Dolce ",650,25,"Capsulas");
 insertarProducto(ListadoCapsulas,11,11,"Capsulas de Cafe Caffetino Nespresso ",610,25,"Capsulas");
 
+        //lo almacenamos en el local storage
+
+        if(!localStorage.hasOwnProperty("listadoCapsulas")){
+            localStorage.setItem("listadoCapsulas", JSON.stringify(ListadoCapsulas));
+        }
+
 // Array con el total de prodcutos
 totalProductos = ListadoCafes.concat(ListadoCapsulas);
+
+    //lo almacenamos en el local storage
+
+    if(!localStorage.hasOwnProperty("TotalProductos")){
+        localStorage.setItem("TotalProductos", JSON.stringify(totalProductos));
+    }
 
 //Generacion automatica y aleatoria de los productos mas vendidos
 
@@ -83,7 +101,7 @@ for(let i = 0; i <=5;){
     let indexAleatorio = aleatorios(totalProductos.length);    
 
     if(!indexUsados.has(indexAleatorio)){
-        bestSellerHTML(totalProductos,elementoPadreBS,indexAleatorio);
+        tiendaHTML(totalProductos,elementoPadreBS,indexAleatorio);
         i++
     }
 
@@ -118,6 +136,16 @@ function encontrarCantidad(pdt,arrayUnidades){
     }
 }
 
+
+//Esta funcion busca un producto en el carrito para verificar si ya existe
+
+function BuscarCarrito(arrayCarrito,producto){
+    for(let unidad of arrayCarrito){
+        if(unidad.idBtn == producto.idBtn) return unidad;
+
+    }
+}
+
 //Esta funcion almacena un objeto de tipo producto en el carrito cuando se pulsa el boton correspondiente
 
 let carrito = [];
@@ -140,17 +168,38 @@ function añadirCarrito(){
 
         //TODO : VERIFICADOR DE QUE EL PRODUCTO YA ESTE EN CARRITO Y ACTUALIZADOR DE CANTIDAD
 
-        producto.stock -= cantidad;
+        if(BuscarCarrito(carrito,producto) ){
+            console.log("ya existo");
 
-        insertarProducto(carrito,producto.idBtn,producto.idUnit,producto.name,producto.value,producto.stock,producto.category,cantidad);
+            let productoSumarUnidades = BuscarCarrito(carrito,producto);
+            productoSumarUnidades.units += cantidad;
+
+            producto.stock -= cantidad;
+
+
+        }else{
+            console.log("no existo");
+            producto.stock -= cantidad;
+            insertarProducto(carrito,producto.idBtn,producto.idUnit,producto.name,producto.value,producto.stock,producto.category,cantidad);
+        }
+
+
         
         CarritoHTML.innerText = String(carrito.length);
-
-        localStorage.setItem("carrito", JSON.stringify(carrito));
+        if(localStorage.hasOwnProperty("carrito")){
+            localStorage.removeItem("carrito");
+            localStorage.setItem("carrito", JSON.stringify(carrito));
+        }else{
+            localStorage.setItem("carrito", JSON.stringify(carrito));
+        }
+        
     }
-    
-    
 }
+
+
+
+
+
 
 
 

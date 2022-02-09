@@ -66,6 +66,20 @@ header nav .navbar ul li a:hover {
   border-bottom: 2px #f3f5f0 solid;
 }
 
+.headerTienda {
+  position: static;
+}
+.headerTienda .brandTienda {
+  color: #363838;
+  text-decoration: none;
+}
+.headerTienda .ulTienda a {
+  color: #363838;
+}
+.headerTienda .ulTienda a:hover {
+  border-bottom: 2px #363838 solid;
+}
+
 main {
   background-color: #f3f5f0;
 }
@@ -196,7 +210,7 @@ main .BestSeller h2 {
 main .BestSeller .BestSeller--grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(2, 1fr);
+  grid-template-rows: 1fr 1fr 30px;
   justify-items: center;
 }
 main .BestSeller .BestSeller--grid .bestSeller--item {
@@ -256,9 +270,21 @@ main .BestSeller .BestSeller--grid .bestSeller--item button:hover {
 main .BestSeller .BestSeller--grid .bestSeller--item:hover {
   transform: scale(1.01);
 }
+main .BestSeller .BestSeller--grid a {
+  grid-area: 3/1/4/4;
+  place-self: center;
+  text-decoration: underline;
+  font-family: "Roboto Condensed", sans-serif;
+  color: #363838;
+  font-size: 3rem;
+  transition: all 0.3s;
+}
+main .BestSeller .BestSeller--grid a:hover {
+  transform: scale(0.9);
+}
 main .Carrito {
-  position: sticky;
-  bottom: 10px;
+  position: fixed;
+  bottom: 30px;
   left: 94%;
   background-color: black;
   background-image: url("/Proyecto_final/resources/Icons/cart-fill.svg");
@@ -329,6 +355,15 @@ footer .footer--LeftBlock h2 {
   font-family: "Bebas Neue", cursive;
   font-size: 6rem;
   letter-spacing: 3px;
+}
+
+.mainTienda {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: auto;
+}
+.mainTienda .tiendaFilter {
+  grid-area: 1/1/3/2;
 }
 
 /*# sourceMappingURL=styles.css.map */
