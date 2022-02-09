@@ -8,7 +8,7 @@ main{
         width: 100%;
         height: 100vh;
         
-        background-image: url("../../resources/imagenes/pexels-jessica-lewis-creative-867465.webp");
+        background-image: url("/Proyecto_final/resources/imagenes/pexels-jessica-lewis-creative-867465.webp");
         background-position: center;
         background-repeat: no-repeat;
 
@@ -110,23 +110,23 @@ main{
                     }
 
                     .divRight{
-                        background-image: url("../../resources/imagenes/coffe-quality.jpg");
+                        background-image: url("/Proyecto_final/resources/imagenes/coffe-quality.jpg");
                         &:hover{
-                            background-image: url("../../resources/imagenes/quality_oscurecida.webp");
+                            background-image: url("/Proyecto_final/resources/imagenes/quality_oscurecida.webp");
                         }
                     }
 
                     .divCenter{
-                        background-image: url("../../resources/imagenes/Coffe-variedad.jpg");
+                        background-image: url("/proyecto_final/resources/imagenes/Coffe-variedad.jpg");
                         &:hover{
-                            background-image: url("../../resources/imagenes/variedad_osucreciad.webp");
+                            background-image: url("/Proyecto_final/resources/imagenes/variedad_osucreciad.webp");
                         }
                     }
 
                     .divLeft{
-                        background-image: url("../../resources/imagenes/coffe-plantacion.jpg");
+                        background-image: url("/Proyecto_final/resources/imagenes/coffe-plantacion.jpg");
                         &:hover{
-                            background-image: url("../../resources/imagenes/plantaciones_oscurecidas.webp");
+                            background-image: url("/Proyecto_final/resources/imagenes/plantaciones_oscurecidas.webp");
                         }
                     }
    
@@ -228,7 +228,7 @@ main{
         bottom: 10px;
         left: 94%;
         background-color: black;
-        background-image: url("../../resources/Icons/cart-fill.svg");
+        background-image: url("/Proyecto_final/resources/Icons/cart-fill.svg");
         background-repeat: no-repeat;
         background-position: center;
         background-size: 50%;
