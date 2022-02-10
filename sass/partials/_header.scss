@@ -50,16 +50,20 @@ header{
 
 .headerTienda{
     position: static;
+    background-color: $black;
+    margin-bottom: 30px;
+
     .brandTienda{
-        color: $black;
+        color: $white;
         text-decoration: none;
+        -webkit-text-stroke: 0px  $black;
     }
 
     .ulTienda{
         a{
-            color: $black;
+            color: $white;
             &:hover{
-                border-bottom: 2px $black solid;
+                border-bottom: 2px $white solid;
             }
         }
     }
