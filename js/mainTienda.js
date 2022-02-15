@@ -148,7 +148,14 @@ function BuscarCarrito(arrayCarrito,producto){
 
 //Esta funcion almacena un objeto de tipo producto en el carrito cuando se pulsa el boton correspondiente
 
-let carrito = [];
+if(localStorage.hasOwnProperty("carrito")){
+    var carrito = JSON.parse(localStorage.getItem("carrito"));
+    CarritoHTML.innerText = String(carrito.length);
+}else{
+    var carrito = [];
+}
+
+// let carrito = [];
 
 function añadirCarrito(){
     let idProducto = this.id;
