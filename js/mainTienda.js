@@ -155,7 +155,6 @@ if(localStorage.hasOwnProperty("carrito")){
     var carrito = [];
 }
 
-// let carrito = [];
 
 function añadirCarrito(){
     let idProducto = this.id;
@@ -214,18 +213,39 @@ let modalClose = document.getElementById("modalClose");
 let botonModal = document.getElementById("carritoModal");
 
 botonModal.onclick = () => {
+    mostrarCarrito(carrito,contenidoModal);
     totalModal.classList.add("mActive");
 }
 
 
 modalClose.onclick = (event) => {
+    contenidoModal.innerHTML = "";
     totalModal.classList.remove("mActive");
 }
 
 window.onclick = (event) => {
     if(event.target == totalModal){
+        contenidoModal.innerHTML = "";
         totalModal.classList.remove("mActive");
     }
 }
+
+
+// Mostrar los productos del carrito en el modal
+function mostrarCarrito(arrayCarrito,modal){
+    for(producto of arrayCarrito){
+        let modalItem = document.createElement("div");
+        modalItem.classList.add("modalItem");
+        modal.append(modalItem);
+
+        modalItem.innerHTML = `
+        <img src="resources/imagenes/coffe_bag.webp" alt="">
+        <p>${producto.name}</p>
+        <p>$${producto.value}</p>
+        <p> unidades: ${producto.units}</p>     
+        `
+    }
+}
+
 
 
