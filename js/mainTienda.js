@@ -13,7 +13,7 @@ class Producto{
         this.stock = inventario;
         this.category = categorias;
         this.units = unidades;
-        this.imgURL = "/Proyecto_final/resources/imagenes/coffe_bag.webp";
+        this.imgURL = "../../resources/imagenes/coffe_bag.webp";
     }
 }
 
@@ -202,11 +202,6 @@ function añadirCarrito(){
         
     }
 }
-
-
-
-
-
 
 
 
