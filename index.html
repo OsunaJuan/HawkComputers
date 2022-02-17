@@ -8,7 +8,7 @@
 
     <link rel="stylesheet" href="css/styles.css">
 </head>
-<body>
+<body class="body--mainTienda">
     <!-- Barra de navegacion -->
     <header>
         <nav>
@@ -80,10 +80,43 @@
         </section>
 
         
-        <button class="Carrito">
+        <button class="Carrito" id="carritoModal">
             <div id="carrito">0</div>
         </button>
     </main>
+
+    <!-- Modal -->
+
+    <div class="modal" id="totalModal">
+        <section class="modal--container" id="contenidoModal">
+            <div class="modalTitle">
+                <h2>Tus productos:</h2>
+                <span id="modalClose">&times;</span>
+            </div>
+            
+
+            <div class="modalItem">
+                <img src="resources/imagenes/coffe_bag.webp" alt="">
+                <p>Cafe brazil</p>
+                <p>$650</p>
+                <p>cantidad: 1</p>
+            </div>
+
+            <div class="modalItem">
+                <img src="resources/imagenes/coffe_bag.webp" alt="">
+                <p>Cafe brazil</p>
+                <p>$650</p>
+                <p>cantidad: 1</p>
+            </div>
+
+            <div class="modalItem">
+                <img src="resources/imagenes/coffe_bag.webp" alt="">
+                <p>Cafe brazil</p>
+                <p>$650</p>
+                <p>cantidad: 1</p>
+            </div>
+            </section>
+    </div>
 
     <!-- Pie de pagina -->
 

@@ -205,3 +205,27 @@ function añadirCarrito(){
 
 
 
+// ------------------------------------------------------------------------------------------------
+// Script del  modal
+
+let totalModal = document.getElementById("totalModal");
+let contenidoModal = document.getElementById("contenidoModal");
+let modalClose = document.getElementById("modalClose");
+let botonModal = document.getElementById("carritoModal");
+
+botonModal.onclick = () => {
+    totalModal.classList.add("mActive");
+}
+
+
+modalClose.onclick = (event) => {
+    totalModal.classList.remove("mActive");
+}
+
+window.onclick = (event) => {
+    if(event.target == totalModal){
+        totalModal.classList.remove("mActive");
+    }
+}
+
+

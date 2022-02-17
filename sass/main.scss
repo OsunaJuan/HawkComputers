@@ -18,10 +18,15 @@ body{
     width: 100%;
     background-color: #f3f5f0;
 }
+
+.body--mainTienda{
+    position: relative;
+}
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto+Condensed:wght@400;700&display=swap');
 @import 'partials/variables';
 @import 'partials/header';
 @import 'partials/main-section';
+@import 'partials/modal';
 @import 'partials/footer';
 @import 'partials/tienda';
 
