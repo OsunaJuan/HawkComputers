@@ -131,7 +131,9 @@ let cantidadArray = Array.from(CantidadInput);
 function encontrarCantidad(pdt,arrayUnidades){
     for(unidad of arrayUnidades){
         if(pdt.idUnit == unidad.id){
-            return Number(unidad.value);
+            let cantidad = Number(unidad.value);
+            unidad.value = "";
+            return cantidad
         }
     }
 }
@@ -242,7 +244,8 @@ function mostrarCarrito(arrayCarrito,modal){
         <img src="resources/imagenes/coffe_bag.webp" alt="">
         <p>${producto.name}</p>
         <p>$${producto.value}</p>
-        <p> unidades: ${producto.units}</p>     
+        <p> unidades: ${producto.units}</p>
+        <span>&times;<span>    
         `
     }
 }
