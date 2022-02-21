@@ -174,8 +174,6 @@ function añadirCarrito(){
 
     if(cantidad > 0 && cantidad <= producto.stock){
 
-        //TODO : VERIFICADOR DE QUE EL PRODUCTO YA ESTE EN CARRITO Y ACTUALIZADOR DE CANTIDAD
-
         if(BuscarCarrito(carrito,producto) ){
             console.log("ya existo");
 
@@ -213,6 +211,8 @@ let totalModal = document.getElementById("totalModal");
 let contenidoModal = document.getElementById("contenidoModal");
 let modalClose = document.getElementById("modalClose");
 let botonModal = document.getElementById("carritoModal");
+let botonComprar = document.getElementById("comprar");
+let botonVolver = document.getElementById("volver");
 
 botonModal.onclick = () => {
     mostrarCarrito(carrito,contenidoModal);
@@ -220,7 +220,7 @@ botonModal.onclick = () => {
 }
 
 
-modalClose.onclick = (event) => {
+modalClose.onclick = () => {
     contenidoModal.innerHTML = "";
     totalModal.classList.remove("mActive");
 }
@@ -232,22 +232,89 @@ window.onclick = (event) => {
     }
 }
 
+botonVolver.onclick = () => {
+    contenidoModal.innerHTML = "";
+    totalModal.classList.remove("mActive");
+}
+
+botonComprar.onclick = () => {
+    contenidoModal.innerHTML = "";
+    contenidoModal.innerHTML = `<p class="carritoVacio">Gracias por tu compra!</p>`
+}
+
+//Funciones para eliminar productos del carrito
+function eliminarCarrito(producto,arrayProductos,arrayTotal){
+    let productoEliminado = arrayProductos.find( (a) => {
+        if (a.name == producto){
+            return arrayProductos.indexOf(a);
+        }
+    });
+
+    console.log(productoEliminado);
+
+    arrayTotal.find((a) =>{
+        if(a.name == arrayProductos[productoEliminado]){
+            console.log("entra")
+
+            a.stock += arrayProductos[productoEliminado].units;
+        }
+    })
+
+
+    arrayProductos.splice(productoEliminado,1);
+
+    contenidoModal.innerHTML = "";
+
+    mostrarCarrito(carrito,contenidoModal);
+
+    if(localStorage.hasOwnProperty("carrito")){
+        localStorage.removeItem("carrito");
+        localStorage.setItem("carrito", JSON.stringify(carrito));
+    }else{
+        localStorage.setItem("carrito", JSON.stringify(carrito));
+    }
+
+    CarritoHTML.innerText = String(carrito.length);
+} 
+
+function eliminarProducto(){
+    let pdt = this.className;
+    eliminarCarrito(pdt,carrito,totalProductos);
+    
+}
 
 // Mostrar los productos del carrito en el modal
 function mostrarCarrito(arrayCarrito,modal){
-    for(producto of arrayCarrito){
-        let modalItem = document.createElement("div");
-        modalItem.classList.add("modalItem");
-        modal.append(modalItem);
+    if(arrayCarrito.length > 0){
 
-        modalItem.innerHTML = `
-        <img src="resources/imagenes/coffe_bag.webp" alt="">
-        <p>${producto.name}</p>
-        <p>$${producto.value}</p>
-        <p> unidades: ${producto.units}</p>
-        <span>&times;<span>    
-        `
+        for(producto of arrayCarrito){
+
+            let modalItem = document.createElement("div");
+            modalItem.classList.add("modalItem");
+            modal.append(modalItem);
+    
+            modalItem.innerHTML = `
+            <img src="resources/imagenes/coffe_bag.webp" alt="">
+            <p>${producto.name}</p>
+            <p>$${producto.value}</p>
+            <p> unidades: ${producto.units}</p>
+            <span class="${producto.name}">&times;<span>    
+            `;    
+            let spanClose = document.getElementsByClassName(producto.name)[0];
+            spanClose.addEventListener("click",eliminarProducto);
+
+            
+        }
+    }else{
+        let carritoVacio = document.createElement("div");
+        carritoVacio.classList.add("carritoVacio");
+        modal.append(carritoVacio);
+        
+        carritoVacio.innerHTML = `<p>Todavia nos has agreagado ningun producto :( </p>`;
+
+
     }
+    
 }
 
 

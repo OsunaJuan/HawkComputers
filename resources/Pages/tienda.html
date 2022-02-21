@@ -41,12 +41,34 @@
 
         </div>
 
-        <button class="Carrito">
+        <button class="Carrito" id="carritoModal">
             <div id="carrito">0</div>
         </button>
-
-
     </main>
+
+    <!-- Modal -->
+
+    <div class="modal" id="totalModal">
+        <section class="modal--container" >
+            
+            <div class="modalTitle">
+                <h2>Tus productos:</h2>
+                <span id="modalClose">&times;</span>
+            </div>
+            
+            <div class="contenidoModal" id="contenidoModal" >
+                <!-- Espacio para que se genere el carrito -->
+            </div>
+
+            <div class="ListadoBotones">
+                <button class="botonModal">Pagar!</button>
+
+                <button class="botonModal">Volver</button>
+            </div>
+            </section>
+    </div>
+
+    <!-- Footer -->
 
     <footer>
         <div class="footer--LeftBlock">

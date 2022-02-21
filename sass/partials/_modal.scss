@@ -9,8 +9,6 @@
     top: 0;
     bottom: 0;
     z-index: 1;
-    transition: all 3s;
-
     .modal--container{
         position: relative;
         max-width: 800px;
@@ -83,32 +81,37 @@
             }
         }
 
+        .carritoVacio{
+            margin-top: 30px;
+            text-align: center;
+            font-family: $roboto;
+            font-size: 2.2rem;
+            color: $black;
+        }
+
         .ListadoBotones{
+            position: sticky;
+            top: 100%;
             width: 100%;
             padding: 20px;
             display: flex;
             justify-content: space-around;
-            .buy{
-                width: 100px;
-                height: 40px;
-                border:none;
-                border-radius: 5px;
-                background-color: #4BB543;
-                font-family: $roboto;
-                color: $black;
-                font-size: 1.6rem;
-            }
 
-            .goBack{
+
+            .botonModal{
                 width: 100px;
                 height: 40px;
-                padding: 5px;
                 border:none;
                 border-radius: 5px;
-                background-color: #5d5fc2;
+                background-color: $black;
                 font-family: $roboto;
-                color: $black;
-                font-size: 1.6rem;
+                color: $white;
+                font-size: 1.6rem; 
+                transition: all 0.5s;
+
+                &:hover{
+                    transform: scale(.9);
+                }
             }
         }
 

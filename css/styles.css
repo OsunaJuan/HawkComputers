@@ -260,6 +260,7 @@ main .BestSeller .BestSeller--grid .bestSeller--item div input {
   border: 2px #363838 solid;
   background-color: #f3f5f0;
   text-align: center;
+  line-height: 10px;
 }
 main .BestSeller .BestSeller--grid .bestSeller--item button {
   width: 100px;
@@ -335,7 +336,6 @@ main .Carrito div {
   top: 0;
   bottom: 0;
   z-index: 1;
-  transition: all 3s;
 }
 .modal .modal--container {
   position: relative;
@@ -402,32 +402,34 @@ main .Carrito div {
 .modal .modal--container .modalItem span:hover {
   cursor: pointer;
 }
+.modal .modal--container .carritoVacio {
+  margin-top: 30px;
+  text-align: center;
+  font-family: "Roboto Condensed", sans-serif;
+  font-size: 2.2rem;
+  color: #363838;
+}
 .modal .modal--container .ListadoBotones {
+  position: sticky;
+  top: 100%;
   width: 100%;
   padding: 20px;
   display: flex;
   justify-content: space-around;
 }
-.modal .modal--container .ListadoBotones .buy {
+.modal .modal--container .ListadoBotones .botonModal {
   width: 100px;
   height: 40px;
   border: none;
   border-radius: 5px;
-  background-color: #4BB543;
+  background-color: #363838;
   font-family: "Roboto Condensed", sans-serif;
-  color: #363838;
+  color: #f3f5f0;
   font-size: 1.6rem;
+  transition: all 0.5s;
 }
-.modal .modal--container .ListadoBotones .goBack {
-  width: 100px;
-  height: 40px;
-  padding: 5px;
-  border: none;
-  border-radius: 5px;
-  background-color: #5d5fc2;
-  font-family: "Roboto Condensed", sans-serif;
-  color: #363838;
-  font-size: 1.6rem;
+.modal .modal--container .ListadoBotones .botonModal:hover {
+  transform: scale(0.9);
 }
 
 .mActive {
