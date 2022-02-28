@@ -1,3 +1,7 @@
+//Codigo para cambiar la cantidad de productos generados segun el tamaño de pantalla
+
+var mediaqueryList = window.matchMedia("(max-width: 800px)");
+
 //Elemento padre donde se mostraran los productos de la seccion BestSeller
 let elementoPadreBS = document.getElementById("BestSellerJS");
 
