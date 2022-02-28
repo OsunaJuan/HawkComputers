@@ -97,7 +97,7 @@ totalProductos = ListadoCafes.concat(ListadoCapsulas);
 
 let indexUsados = new Set();
 
-for(let i = 0; i <=5;){
+for(let i = 0; i <=2;){
     let indexAleatorio = aleatorios(totalProductos.length);    
 
     if(!indexUsados.has(indexAleatorio)){

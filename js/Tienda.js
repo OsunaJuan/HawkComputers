@@ -262,7 +262,13 @@ window.onclick = (event) => {
 }
 
 botonVolver.onclick = () => {
-  console.log("aaaaaaa");
+  contenidoModal.innerHTML = "";
+    totalModal.classList.remove("mActive");
+}
+
+botonComprar.onclick = () => {
+  contenidoModal.innerHTML = "";
+  contenidoModal.innerHTML = `<p class="carritoVacio">Gracias por tu compra!</p>`
 }
 
 
