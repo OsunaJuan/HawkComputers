@@ -267,8 +267,13 @@ botonVolver.onclick = () => {
 }
 
 botonComprar.onclick = () => {
-  contenidoModal.innerHTML = "";
-  contenidoModal.innerHTML = `<p class="carritoVacio">Gracias por tu compra!</p>`
+  if(carrito.length>0){
+    contenidoModal.innerHTML = "";
+    contenidoModal.innerHTML = `<p class="carritoVacio">Gracias por tu compra!</p>`
+}else{
+    contenidoModal.innerHTML = "";
+    contenidoModal.innerHTML = `<p class="carritoVacio">Aun no has agregado nada al carro de compra!</p>`
+}
 }
 
 

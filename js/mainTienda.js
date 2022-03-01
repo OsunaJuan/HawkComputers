@@ -1,7 +1,3 @@
-//Codigo para cambiar la cantidad de productos generados segun el tamaño de pantalla
-
-var mediaqueryList = window.matchMedia("(max-width: 800px)");
-
 //Elemento padre donde se mostraran los productos de la seccion BestSeller
 let elementoPadreBS = document.getElementById("BestSellerJS");
 
@@ -99,9 +95,22 @@ totalProductos = ListadoCafes.concat(ListadoCapsulas);
 
 //Generacion automatica y aleatoria de los productos mas vendidos
 
+
+//Codigo para cambiar la cantidad de productos generados segun el tamaño de pantalla
+
+var mediaqueryList = window.matchMedia("(max-width: 800px)");
+
+let productosMostrados;
+
+if(mediaqueryList.matches){
+    productosMostrados = 2
+}else{
+    productosMostrados = 5
+}
+
 let indexUsados = new Set();
 
-for(let i = 0; i <=2;){
+for(let i = 0; i <=productosMostrados;){
     let indexAleatorio = aleatorios(totalProductos.length);    
 
     if(!indexUsados.has(indexAleatorio)){
@@ -242,8 +251,15 @@ botonVolver.onclick = () => {
 }
 
 botonComprar.onclick = () => {
-    contenidoModal.innerHTML = "";
-    contenidoModal.innerHTML = `<p class="carritoVacio">Gracias por tu compra!</p>`
+
+    if(carrito.length>0){
+        contenidoModal.innerHTML = "";
+        contenidoModal.innerHTML = `<p class="carritoVacio">Gracias por tu compra!</p>`
+    }else{
+        contenidoModal.innerHTML = "";
+        contenidoModal.innerHTML = `<p class="carritoVacio">Aun no has agregado nada al carro de compra!</p>`
+    }
+
 }
 
 //Funciones para eliminar productos del carrito
